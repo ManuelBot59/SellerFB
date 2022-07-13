@@ -90,7 +90,7 @@ def show_item_informations(seller_items):
     while (i < len(seller_items)):
         print(f"""
 Name : {seller_items[i]['name']} && Price : {seller_items[i]['price']},
-Item ID : {seller_items[i]['item_id']} && URL : https://www.facebook.com/markteplace/item{seller_items[i]['item_id']}""")
+Item ID : {seller_items[i]['item_id']} && URL : https://www.facebook.com/marketplace/item/{seller_items[i]['item_id']}""")
         #Delivery: {seller_informations[i]['seller_items']['delivery']}
         #Picture: {seller_informations[i]['seller_items']['picture']},
 

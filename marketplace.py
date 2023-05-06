@@ -122,7 +122,7 @@ def main():
        'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
      # 'Accept': '*/*',
        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,'
-        'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+     #   'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
         'X-FB-Friendly-Name': 'MarketplaceSellerProfileDialogQuery',
         'Origin': 'https://www.facebook.com',
         'DNT': '1',

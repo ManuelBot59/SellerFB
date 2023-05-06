@@ -4,6 +4,16 @@ from localuseragent import ua
 import random
 import argparse
 
+headers = {
+    'authority': 'www.facebook.com',
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,'
+              'application/signed-exchange;v=b3;q=0.9',
+    'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                  'Chrome/109.0.0.0 Safari/537.36',
+    'viewport-width': '640',
+}
+
 def general_informations(data, seller_informations, seller_items, seller_groups):
     seller_informations.append({
         "nbr_total_item":data["data"]["user"]["marketplace_commerce_inventory"]["count"],

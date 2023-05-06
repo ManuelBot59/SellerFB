@@ -125,9 +125,9 @@ def main():
      #   'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
      #   'X-FB-Friendly-Name': 'MarketplaceSellerProfileDialogQuery',
         'Origin': 'https://www.facebook.com',
-        'DNT': '1',
-        'Connection': 'keep-alive',
-        'Sec-Fetch-Site': 'same-origin'
+     #   'DNT': '1',
+     #   'Connection': 'keep-alive',
+     #   'Sec-Fetch-Site': 'same-origin'
     }
         
     payload = {

@@ -118,7 +118,7 @@ def main():
   #     'User-Agent': random.choice(ua["browsers"]["chrome"]),
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                   'Chrome/109.0.0.0 Safari/537.36',
-       'authority': 'www.facebook.com',   
+    #   'authority': 'www.facebook.com',   
        'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
      # 'Accept': '*/*',
        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,'

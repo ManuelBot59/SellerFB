@@ -4,16 +4,6 @@ from localuseragent import ua
 import random
 import argparse
 
-headers = {
-    'authority': 'www.facebook.com',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,'
-              'application/signed-exchange;v=b3;q=0.9',
-    'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
-    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
-                  'Chrome/109.0.0.0 Safari/537.36',
-    'viewport-width': '640',
-}
-
 def general_informations(data, seller_informations, seller_items, seller_groups):
     seller_informations.append({
         "nbr_total_item":data["data"]["user"]["marketplace_commerce_inventory"]["count"],
@@ -124,17 +114,28 @@ def main():
     parser.add_argument("-i", "--id", help="Facebook UserID account", required=True)
     args = parser.parse_args()
     user_id = args.id
+  #  headers = {
+  #      'User-Agent': random.choice(ua["browsers"]["chrome"]),
+  #     'Accept': '*/*',
+  #      'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+  #      'X-FB-Friendly-Name': 'MarketplaceSellerProfileDialogQuery',
+  #      'Origin': 'https://www.facebook.com',
+  #      'DNT': '1',
+  #      'Connection': 'keep-alive',
+  #      'Sec-Fetch-Site': 'same-origin'
+  #  }
+    
     headers = {
-        'User-Agent': random.choice(ua["browsers"]["chrome"]),
-        'Accept': '*/*',
-        'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
-        'X-FB-Friendly-Name': 'MarketplaceSellerProfileDialogQuery',
-        'Origin': 'https://www.facebook.com',
-        'DNT': '1',
-        'Connection': 'keep-alive',
-        'Sec-Fetch-Site': 'same-origin'
-    }
-
+    'authority': 'www.facebook.com',
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,'
+              'application/signed-exchange;v=b3;q=0.9',
+    'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                  'Chrome/109.0.0.0 Safari/537.36',
+    'viewport-width': '640',
+     }
+    
+    
     payload = {
         'variables': '{"canViewCustomizedProfile":true,"count":8,"isCOBMOB":false,"scale":1,"sellerId":"'+user_id+'"}',
         'doc_id': '4872548596176106',
